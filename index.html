@@ -148,36 +148,107 @@ html{scrollbar-gutter:stable;}
 .loadmsg{padding:34px 10px;text-align:center;font-size:13px;color:var(--muted);}
 .loadmsg.err{color:#a4431f;font-weight:500;}
 /* ===== раздел 3 · обещания FTA против факта: стили блока ===== */
-  .sec-prv .prv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 24px;margin-top:16px}
-  .sec-prv .prv-cell{background:#20262e;border:1px solid var(--line);border-radius:6px;padding:13px 15px 11px;min-width:0}
-  .sec-prv .prv-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:7px}
-  .sec-prv .prv-name{font-size:14px;font-weight:600;color:var(--ink)}
-  .sec-prv .prv-badge{font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:99px;white-space:nowrap}
-  .sec-prv .prv-b-green{background:rgba(99,189,143,.16);color:#63bd8f}
-  .sec-prv .prv-b-amber{background:rgba(217,160,91,.16);color:#d9a05b}
-  .sec-prv .prv-b-coral{background:rgba(232,131,106,.15);color:#e8836a}
-  .sec-prv .prv-q{font-size:12.5px;line-height:1.42;font-style:italic;color:var(--ink);min-height:54px}
-  .sec-prv .prv-qsrc{font-size:11px;color:var(--faint);font-style:normal;margin-top:3px}
-  .sec-prv .prv-host{margin-top:6px}
-  .sec-prv .prv-fact{font-size:11.5px;color:var(--mut);margin-top:6px;line-height:1.45}
-  .sec-prv .prv-host svg text{font-size:10.5px;fill:var(--mut);pointer-events:none}
-  .sec-prv .prv-host svg .prv-vt{fill:var(--ink);font-weight:600;font-size:11px}
-  .sec-prv .prv-host svg .prv-gline{stroke:var(--line);stroke-width:1}
-  .sec-prv .prv-host svg .prv-frame{fill:#1e242c;stroke:var(--line);stroke-width:1}
-  .sec-prv .prv-host svg .prv-tr{fill:none;stroke:var(--fta);stroke-width:2}
-  .sec-prv .prv-host svg .prv-hit{fill:transparent;cursor:crosshair}
-  .sec-prv .prv-host svg .prv-eif{stroke:var(--faint);stroke-width:1;stroke-dasharray:2 3}
-  .sec-prv .prv-host svg .prv-tdot{fill:#1e242c;stroke:var(--ink);stroke-width:1.6;cursor:crosshair}
-  .sec-prv .prv-host svg .prv-tdotf{fill:#1e242c;stroke:var(--faint);stroke-width:1.4;stroke-dasharray:3 2;cursor:crosshair}
-  .sec-prv .prv-tg-lab{font-size:10.5px;fill:var(--ink)}
-  .sec-prv .src{margin-top:12px;font-size:11.5px;color:var(--faint);line-height:1.5}
-  @media (max-width:920px){ .sec-prv .prv-grid{grid-template-columns:repeat(2,1fr)} }
-  @media (max-width:620px){ .sec-prv .prv-grid{grid-template-columns:1fr} }
+.sec-prv .prv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 24px;margin-top:16px}
+.sec-prv .prv-cell{background:#20262e;border:1px solid var(--line);border-radius:6px;padding:13px 15px 11px;min-width:0}
+.sec-prv .prv-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:7px}
+.sec-prv .prv-name{font-size:14px;font-weight:600;color:var(--ink)}
+.sec-prv .prv-badge{font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.sec-prv .prv-b-green{background:rgba(99,189,143,.16);color:#63bd8f}
+.sec-prv .prv-b-amber{background:rgba(217,160,91,.16);color:#d9a05b}
+.sec-prv .prv-b-coral{background:rgba(232,131,106,.15);color:#e8836a}
+.sec-prv .prv-q{font-size:12.5px;line-height:1.42;font-style:italic;color:var(--ink);min-height:54px}
+.sec-prv .prv-qsrc{font-size:11px;color:var(--faint);font-style:normal;margin-top:3px}
+.sec-prv .prv-host{margin-top:6px}
+.sec-prv .prv-fact{font-size:11.5px;color:var(--mut);margin-top:6px;line-height:1.45}
+.sec-prv .prv-host svg text{font-size:10.5px;fill:var(--mut);pointer-events:none}
+.sec-prv .prv-host svg .prv-vt{fill:var(--ink);font-weight:600;font-size:11px}
+.sec-prv .prv-host svg .prv-gline{stroke:var(--line);stroke-width:1}
+.sec-prv .prv-host svg .prv-frame{fill:#1e242c;stroke:var(--line);stroke-width:1}
+.sec-prv .prv-host svg .prv-tr{fill:none;stroke:var(--fta);stroke-width:2}
+.sec-prv .prv-host svg .prv-hit{fill:transparent;cursor:crosshair}
+.sec-prv .prv-host svg .prv-eif{stroke:var(--faint);stroke-width:1;stroke-dasharray:2 3}
+.sec-prv .prv-host svg .prv-tdot{fill:#1e242c;stroke:var(--ink);stroke-width:1.6;cursor:crosshair}
+.sec-prv .prv-host svg .prv-tdotf{fill:#1e242c;stroke:var(--faint);stroke-width:1.4;stroke-dasharray:3 2;cursor:crosshair}
+.sec-prv .prv-tg-lab{font-size:10.5px;fill:var(--ink)}
+.sec-prv .src{margin-top:12px;font-size:11.5px;color:var(--faint);line-height:1.5}
+@media (max-width:920px){ .sec-prv .prv-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:620px){ .sec-prv .prv-grid{grid-template-columns:1fr} }
+
+/* ===== раздел 4 · ДЗМ-расследования: стили блока ===== */
+.sec-dzr{
+    --dzr-meas:var(--fta,#0f6e77);
+    --dzr-inv:color-mix(in srgb, var(--fta,#0f6e77) 34%, transparent);
+    --dzr-inv-line:color-mix(in srgb, var(--fta,#0f6e77) 62%, transparent);
+    --dzr-field:#1e242c;
+    --dzr-ok:#63bd8f;
+    --dzr-no:#e8836a;
+    --dzr-part:var(--india,#e6913e);
+  }
+.sec-dzr .dzr-box{border:1px solid var(--line);border-radius:6px;background:var(--dzr-field);margin-top:12px;overflow:hidden}
+.sec-dzr .dzr-src{margin-top:12px;font-size:11.5px;color:var(--faint)}
+.sec-dzr text{font-family:'Libre Franklin',system-ui,sans-serif}
+.sec-dzr .dzr-inv-l{stroke:var(--dzr-inv-line);stroke-width:2}
+.sec-dzr .dzr-inv-c{fill:var(--dzr-field);stroke:var(--dzr-inv-line);stroke-width:1.6}
+.sec-dzr .dzr-meas-l{stroke:var(--dzr-meas);stroke-width:2.6}
+.sec-dzr .dzr-meas-c{fill:var(--dzr-meas)}
+.sec-dzr .dzr-hit{stroke:transparent;stroke-width:14;cursor:crosshair}
+.sec-dzr .dzr-date{fill:var(--faint);font-size:10px}
+.sec-dzr .dzr-good{fill:var(--ink);font-size:13px}
+.sec-dzr .dzr-country{fill:var(--dzr-meas);font-size:11.5px;font-weight:600;letter-spacing:.1em}
+.sec-dzr .dzr-axis{fill:var(--mut);font-size:11.5px}
+.sec-dzr .dzr-grid{stroke:var(--line);stroke-opacity:.6}
+.sec-dzr .dzr-grule{stroke:var(--line);stroke-opacity:.75}
+.sec-dzr .dzr-rowrule{stroke:var(--line);stroke-opacity:.35}
+.sec-dzr .dzr-gap{fill:color-mix(in srgb, var(--india) 16%, transparent)}
+.sec-dzr .dzr-gap-e{stroke:color-mix(in srgb, var(--india) 50%, transparent);stroke-width:1;stroke-dasharray:2,3}
+.sec-dzr .dzr-gap-l{stroke:var(--india);stroke-width:1;stroke-opacity:.8}
+.sec-dzr .dzr-gap-d{fill:var(--india)}
+.sec-dzr .dzr-note-box{fill:var(--dzr-field);stroke:color-mix(in srgb, var(--india) 45%, transparent);stroke-width:1}
+.sec-dzr .dzr-note-h{fill:var(--india);font-size:12px;font-weight:600}
+.sec-dzr .dzr-note-t{fill:var(--mut);font-size:11.5px}
+.sec-dzr .dzr-note-b{fill:var(--india);font-weight:600}
+.sec-dzr .dzr-note-m{margin:12px 0 0;padding-left:10px;border-left:2px solid var(--india);font-size:12.5px;color:var(--mut)}
+.sec-dzr .dzr-note-m b{color:var(--india);font-weight:600}
+.sec-dzr .dzr-sw{vertical-align:middle;margin:0 3px 2px 5px}
+.sec-dzr .dzr-sw .l{stroke:var(--dzr-inv-line);stroke-width:2}
+.sec-dzr .dzr-sw .c{fill:var(--dzr-field);stroke:var(--dzr-inv-line);stroke-width:1.6}
+.sec-dzr .dzr-sw.dzr-sw-m .l{stroke:var(--dzr-meas);stroke-width:2.6}
+.sec-dzr .dzr-sw.dzr-sw-m .c{fill:var(--dzr-meas);stroke:none}
+.sec-dzr .dzr-peak{color:var(--ink);font-weight:600}
+.sec-dzr .dzr-st{outline:none;cursor:help}
+.sec-dzr .dzr-st-ring{fill:transparent;stroke:transparent;stroke-width:1.2}
+.sec-dzr .dzr-st:hover .dzr-st-ring,
+  .sec-dzr .dzr-st:focus-visible .dzr-st-ring{stroke:var(--mut)}
+.sec-dzr .dzr-st-g{fill:none;stroke:var(--bg,#1a1e25);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.sec-dzr .dzr-st-ok  .dzr-st-c{fill:var(--dzr-ok)}
+.sec-dzr .dzr-st-no  .dzr-st-c{fill:var(--dzr-no)}
+.sec-dzr .dzr-st-part .dzr-st-c{fill:none;stroke:var(--dzr-part);stroke-width:1.6}
+.sec-dzr .dzr-st-part .dzr-st-h{fill:var(--dzr-part)}
+.sec-dzr .dzr-leg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:14px;font-size:12.5px;color:var(--mut)}
+.sec-dzr .dzr-leg b{color:var(--ink);font-weight:600}
+.sec-dzr .dzr-leg span{display:inline-flex;align-items:center;gap:6px}
+.sec-dzr .dzr-leg .dzr-st{cursor:default}
+.sec-dzr .dzr-leg .dzr-st-ring{display:none}
+.sec-dzr .dzr-leg .dzr-leg-n{color:var(--faint);padding-left:18px;border-left:1px solid var(--line)}
+.sec-dzr .dzr-ok{color:var(--dzr-ok);font-weight:600}
+.sec-dzr .dzr-no{color:var(--dzr-no);font-weight:600}
+.sec-dzr .dzr-part{color:var(--dzr-part);font-weight:600}
+@media (max-width:640px){
+    .sec-dzr .dzr-good{font-size:11.5px}
+    .sec-dzr .dzr-date{display:none}
+  }
 
 /* ===== сводный отчёт ===== */
 section+section{margin-top:64px}
 .msub{text-align:justify}
 h1 .h1-acc{color:var(--india)}
+/* инлайн-SVG (свотчи и значки легенд) не растягиваются глобальным правилом
+   svg{display:block;width:100%} из базовых стилей карты и стримграфа:
+   у SVG с атрибутами width/height размер берётся из атрибутов;
+   свотчам в тексте возвращаем строчное поведение */
+svg[width][height]{width:auto;height:auto}
+.sec-dzr .dzr-sw{display:inline-block}
+.sec-dzr .dzr-leg svg{display:inline-block}
 /* ===== ТЁМНАЯ ТЕМА ===== */
 :root{--bg:#1a1e25;--ink:#ece9e0;--mut:#a7adb8;--faint:#737b88;--line:#333a45;
       --fta:#3ea79c;--negot:#cfe0de;--oth:#454b56;--india:#e6913e;
@@ -252,6 +323,8 @@ button:focus-visible,input[type=range]:focus-visible{outline-color:#ece9e0}
     <p class="howto"><b>Как читать:</b> страна учитывается в группе с календарного года вступления соглашения в силу.
        Наведите курсор на ось с годами — сводка по четырём группам и торговый баланс; на ленту — сводка группы.
        Кнопки в легенде выбирают группу и показывают её разбивку.</p>
+
+    <p class="src">Источники: WTO RTA database (AllRTA), статистика внешней торговли — UN Comtrade.</p>
   </section>
 
   <!-- ===== раздел 3 · обещания FTA против факта ===== -->
@@ -264,7 +337,23 @@ button:focus-visible,input[type=range]:focus-visible{outline-color:#ece9e0}
     <p class="src">Источники: UN Comtrade (отчётность Индии, товары, 2008–2025); цели — PIB / Ministry of Commerce and Industry (релизы от 31.07.2011, 18.02.2011, 18.02.2022, 02.04.2022 и 29.12.2022), заявления министров и совместные заявления (Livemint 03.2015; CSDR Online / Economies 2022).</p>
   </section>
 
-  <footer>Источники: WTO RTA database (AllRTA), UN Comtrade. Расчёты и правило классификации стран по годам вступления соглашений в силу — автор.</footer>
+  <!-- ===== раздел 4 · сроки ДЗМ-расследований ===== -->
+  <section class="sec-dzr">
+    <h2>Аварийный тормоз свободной торговли</h2>
+    <p class="lede">Обещания соглашений не сбылись — но местами свободная торговля сработала слишком хорошо. В каждое ССТ Индии встроен предохранитель: если импорт партнёра после вступления соглашения в силу растёт слишком быстро, пошлины можно временно вернуть. Впервые Индия нажала эту кнопку 14 августа 2019 года — и с тех пор почти без пауз либо вела расследование<svg class="dzr-sw" width="30" height="10" viewBox="0 0 30 10" aria-hidden="true"><line class="l" x1="3.5" y1="5" x2="26.5" y2="5"/><circle class="c" cx="3.5" cy="5" r="3.1"/><circle class="c" cx="26.5" cy="5" r="3.1"/></svg>, либо применяла меру<svg class="dzr-sw dzr-sw-m" width="30" height="10" viewBox="0 0 30 10" aria-hidden="true"><line class="l" x1="3.5" y1="5" x2="26.5" y2="5"/><circle class="c" cx="3.5" cy="5" r="3.1"/><circle class="c" cx="26.5" cy="5" r="3.1"/></svg>: шесть товаров, три страны-партнёра, четыре кейса против одной Кореи и лишь два коротких перерыва за семь лет. Помогло — через раз: из четырёх введённых мер две уверенно остудили импорт. Пик — конец сентября 2020-го: одновременно три расследования и две действующие меры.</p>
+
+    <div class="dzr-leg" id="dzr-leg"></div>
+
+    <div class="dzr-box">
+      <div id="dzr-chart"></div>
+    </div>
+    <p class="dzr-note-m" id="dzr-note-m" hidden></p>
+    <div id="dzrtip" class="tip" role="tooltip"></div>
+
+    <p class="dzr-src">Источник: уведомления DGTR и Министерства финансов Индии, 2019–2026 гг. Оценка эффекта — по динамике годового импорта (UN Comtrade); это ориентир, а не доказательство причинности: часть мер действовала параллельно с другими инструментами.</p>
+  </section>
+
+  <footer>Голубенко Вера, для курса «Эстетика в графиках»</footer>
 </div>
 
 <div id="tip" class="tip" role="tooltip"></div>
@@ -1581,6 +1670,378 @@ function breakdownTip(k, i){
   function onResize() { var w = grid.clientWidth; if (w !== lastW) { lastW = w; renderAll(); } }
   if (window.ResizeObserver) new ResizeObserver(onResize).observe(grid);
   window.addEventListener('resize', onResize);
+})();
+</script>
+<script>
+'use strict';
+(function () {
+  /* === ДАННЫЕ БЛОКА ===
+     st — статус эффекта: ok (помогла) / no (не помогла) / part (неоднозначно);
+          null — мера не вводилась, значок не показывается.
+     effect — оценка по годовым данным UN Comtrade, млн $ (без слова-статуса:
+     статус показывается отдельной строкой). */
+  const D = {
+    groups: [
+      { country: 'Малайзия', items: [
+        { good: 'Пальмовое масло',
+          inv: ['2019-08-14', '2020-02-28'],
+          meas: ['2019-09-04', '2020-03-02'],
+          size: '+5 п.п. (ставка 45% → 50%), только предварительная',
+          st: 'part',
+          effect: 'Скорее помогла, но в связке: импорт рафинированного масла из Малайзии упал со $1289 млн (2019) до $7 млн (2020), одновременно действовало лицензирование (категория Restricted); окончательная мера не вводилась' } ] },
+      { country: 'Корея', items: [
+        { good: 'Фталевый ангидрид',
+          inv: ['2019-10-01', '2020-09-28'],
+          meas: ['2020-07-06', '2022-07-05'],
+          size: 'до 7,5% (предварительная), затем до уровня MFN',
+          st: 'ok',
+          effect: 'Импорт из Кореи упал со $78 млн (2019) до $0,8 млн (2025), −97%',
+          ad: 'с 09.08.2021 по 05.07.2022 параллельно действовала антидемпинговая мера' },
+        { good: 'Полибутадиеновый каучук',
+          inv: ['2019-11-07', '2020-10-22'],
+          meas: ['2020-07-13', '2022-07-12'],
+          size: 'до 10% (= уровень MFN)',
+          st: 'no',
+          effect: 'Эффект краткосрочный: импорт снизился до $52 млн (2020), но восстановился до $83 млн (2022) ещё до истечения меры и достиг $108 млн (2024)' },
+        { good: 'Ферромолибден',
+          inv: ['2022-09-30', '2023-05-29'],
+          meas: ['2023-10-10', '2025-10-09'],
+          size: 'до уровня MFN',
+          st: 'ok',
+          effect: '−94% в первый год меры (со $106 млн в 2022 до $5,9 млн в 2024), к 2025 году — около нуля' },
+        { good: 'Пластификаторы DOTP',
+          inv: ['2025-09-30', '2026-05-27'],
+          meas: null,
+          size: 'мера не вводилась: DGTR рекомендовала (27.05.2026), Минфин Индии отказался — до конца переходного периода оставалось 3–4 месяца действия',
+          st: null,
+          effect: '' } ] },
+      { country: 'Япония', items: [
+        { good: 'ПВХ-суспензионная смола',
+          inv: ['2020-09-08', '2021-07-23'],
+          meas: null,
+          size: 'мера не вводилась: заявление отозвано заявителями 23.07.2021',
+          st: null,
+          effect: '' } ] }
+    ],
+    /* шкала: с 1 января 2019 (чтобы подпись «2019» стояла на своей линии) до конца 2026 */
+    domain: ['2019-01-01', '2026-12-31']
+  };
+
+  /* подписи статусов: leg — в легенде, tip — первой строкой тултипа значка */
+  const ST = {
+    ok:   { leg: 'помогла',      tip: 'Помогла' },
+    no:   { leg: 'не помогла',   tip: 'Не помогла' },
+    part: { leg: 'неоднозначно', tip: 'Неоднозначно' }
+  };
+
+  /* === ВСПОМОГАТЕЛЬНОЕ === */
+  const DAY = 864e5;
+  const fmtD = iso => { const [y, m, d] = iso.split('-'); return d + '.' + m + '.' + y; };
+  const addDays = (iso, n) => new Date(new Date(iso).getTime() + n * DAY).toISOString().slice(0, 10);
+  const fmtMo = days => (days / 30.44).toFixed(1).replace('.', ',');
+
+  /* === ПЕРЕРЫВЫ ВЫЧИСЛЯЮТСЯ ИЗ ДАННЫХ ===
+     Сливаем все интервалы (расследования и меры, концы включительно);
+     дни вне объединения внутри [covStart; covEnd] — перерывы. */
+  const spans = [];
+  D.groups.forEach(g => g.items.forEach(it => { spans.push(it.inv); if (it.meas) spans.push(it.meas); }));
+  spans.sort((p, q) => (p[0] < q[0] ? -1 : p[0] > q[0] ? 1 : 0));
+  const gaps = [];
+  let curEnd = spans[0][1];
+  spans.slice(1).forEach(([s, e]) => {
+    if (s > addDays(curEnd, 1)) {
+      const a = addDays(curEnd, 1);
+      gaps.push({ a, b: s, days: Math.round((new Date(s) - new Date(a)) / DAY) });
+    }
+    if (e > curEnd) curEnd = e;
+  });
+  const covStart = spans[0][0], covEnd = curEnd;
+
+  /* текст примечания: заголовок + тело из сегментов [текст, жирный?].
+     Неразрывные пробелы (\u00A0) не дают переносу оторвать «с/по» от даты и тире от слова.
+     Формулировка рассчитана на ровно два перерыва («Только два…»). */
+  const NOTE = {
+    head: `Только два перерыва за ${covStart.slice(0, 4)}–${covEnd.slice(0, 4)} гг.`,
+    body: [
+      ['В эти ', 0],
+      [gaps.map(g => fmtMo(g.days)).join(' и ') + ' мес.', 1],
+      [' в Индии не шло ни одного ДЗМ-расследования и не действовало ни одной меры. Всё остальное время — с\u00A0' +
+        fmtD(covStart) + ' по\u00A0' + fmtD(covEnd) + '\u00A0— покрыто непрерывно: расследованием или мерой.', 0]
+    ]
+  };
+
+  /* === КОНТЕЙНЕРЫ И ТУЛТИП === */
+  const host = document.getElementById('dzr-chart');
+  const tip  = document.getElementById('dzrtip');
+  const nm   = document.getElementById('dzr-note-m');
+  function tipShow(html, ev){ tip.innerHTML = html; tip.style.opacity = 1; tipMove(ev); }
+  function tipMove(ev){
+    const pad = 16, w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = ev.clientX + pad, y = ev.clientY + pad;
+    if (x + w > innerWidth - 8) x = ev.clientX - w - pad;
+    if (y + h > innerHeight - 8) y = ev.clientY - h - pad;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  function tipHide(){ tip.style.opacity = 0; }
+  const anchorEv = el => { const r = el.getBoundingClientRect(); return { clientX: r.right, clientY: r.top }; };
+  /* тап по значку на тач-экранах: скрываем тултип тапом в любое другое место */
+  document.addEventListener('click', ev => { if (!(ev.target.closest && ev.target.closest('.dzr-st'))) tipHide(); });
+
+  /* тултип отрезка: расследование — только товар и страна;
+     мера — товар, страна и размер меры. Сроки не показываем: они видны на графике */
+  function tipBar(g, it, kind){
+    let h = `<b>${it.good}</b> · ${g.country}`;
+    if (kind === 'meas') h += `<br>Размер меры: ${it.size}`;
+    return h;
+  }
+  /* тултип значка: статус + оценка эффекта */
+  function tipStatus(g, it){
+    let h = `<b>${it.good}</b> · ${g.country}<br><span class="dzr-${it.st}">${ST[it.st].tip}</span><br>`;
+    h += it.effect;
+    if (it.ad) h += `<br><span style="color:#b9a3d6">${it.ad}</span>`;
+    return h;
+  }
+  function tipGap(gp){
+    return `<b>Перерыв: ${gp.days} дн.</b><br>${fmtD(gp.a)} — ${fmtD(addDays(gp.b, -1))}<br>` +
+           'Нет ни расследования, ни меры ни по одному из товаров';
+  }
+
+  /* === ЗНАЧОК СТАТУСА (форма + цвет), центр в (0,0), родитель — <g class="dzr-st dzr-st-*"> === */
+  function addIcon(sel, st){
+    sel.append('circle').attr('class', 'dzr-st-ring').attr('r', 11.5);   /* зона наведения + рамка фокуса */
+    sel.append('circle').attr('class', 'dzr-st-c').attr('r', 8);
+    if (st === 'ok')   sel.append('path').attr('class', 'dzr-st-g').attr('d', 'M-3.6,0.4L-1,3L3.7,-2.7');
+    if (st === 'no')   sel.append('path').attr('class', 'dzr-st-g').attr('d', 'M-3,-3L3,3M3,-3L-3,3');
+    if (st === 'part') sel.append('path').attr('class', 'dzr-st-h').attr('d', 'M0,-8A8,8 0 0 0 0,8Z');
+  }
+
+  /* легенда значков (один раз) */
+  (function buildLegend(){
+    const leg = document.getElementById('dzr-leg');
+    leg.innerHTML = '<b>Эффект меры:</b>';
+    ['ok', 'no', 'part'].forEach(k => {
+      const s = document.createElement('span');
+      const sv = d3.select(s).append('svg').attr('width', 22).attr('height', 22)
+        .attr('viewBox', '-11 -11 22 22').attr('aria-hidden', 'true');
+      addIcon(sv.append('g').attr('class', 'dzr-st dzr-st-' + k), k);
+      s.appendChild(document.createTextNode(ST[k].leg));
+      leg.appendChild(s);
+    });
+    const n = document.createElement('span');
+    n.className = 'dzr-leg-n';
+    n.textContent = 'без значка — мера не вводилась';
+    leg.appendChild(n);
+  })();
+
+  /* === ПРИМЕЧАНИЕ К ПЕРЕРЫВАМ ===
+     Карточка справа от второго перерыва, на уровне строк Малайзии/Кореи, где
+     данных уже нет. Текст переносится по измеренной ширине слов; карточка
+     подгоняется под самую длинную строку. Рисуется ПОСЛЕДНЕЙ, чтобы
+     непрозрачная заливка закрыла разделители строк.
+     Правый край карточки — в 16 px от рамки (симметрично левому отступу).
+     Возвращает false, если карточка не помещается (тогда — абзац под графиком). */
+  function drawNote(svg, W, m, x){
+    const PX = 14, PY = 12, STEP = 16, GAP_X = 40, EDGE = 16;
+    const tokens = [];
+    NOTE.body.forEach(([s, b]) => s.split(' ').filter(Boolean).forEach(w => tokens.push({ w, b })));
+
+    const cls = b => 'dzr-note-t' + (b ? ' dzr-note-b' : '');
+    const meas = (txt, c) => {
+      const t = svg.append('text').attr('class', c).text(txt);
+      const L = t.node().getComputedTextLength();
+      t.remove();
+      return L;
+    };
+    const SP = meas('a a', cls(0)) - meas('aa', cls(0));
+    const headW = meas(NOTE.head, 'dzr-note-h');
+
+    const xEnd = x(new Date(gaps[gaps.length - 1].b));      /* правый край второго перерыва */
+    const cx0 = xEnd + GAP_X;                                 /* левый край карточки */
+    const maxText = Math.min(W - EDGE - cx0, 380) - 2 * PX;
+    if (maxText < 200 || headW > maxText) return false;
+
+    /* перенос слов */
+    tokens.forEach(tk => { tk.wd = meas(tk.w, cls(tk.b)); });
+    const lines = [];
+    let cur = { toks: [], w: 0 };
+    tokens.forEach(tk => {
+      if (cur.toks.length && cur.w + SP + tk.wd > maxText) { lines.push(cur); cur = { toks: [], w: 0 }; }
+      cur.w += (cur.toks.length ? SP : 0) + tk.wd;
+      cur.toks.push(tk);
+    });
+    lines.push(cur);
+
+    const textW = Math.max(headW, d3.max(lines, l => l.w));
+    const cw = textW + 2 * PX;
+    const n = lines.length;
+    const ch = 2 * PY + 36 + (n - 1) * STEP;                  /* заголовок + первая строка + остальные */
+    if (ch > 190) return false;                               /* не дотягиваем до строки ферромолибдена */
+
+    const ny0 = m.t + 6;
+    const hy = ny0 + PY + 10;                                 /* базовая линия заголовка */
+    const by = hy + 21;                                       /* базовая линия первой строки */
+    const ys = [ny0 + 24, ny0 + 46];                          /* высоты выносок: верхняя — к дальнему (первому) перерыву */
+
+    const g = svg.append('g').attr('class', 'dzr-note').style('pointer-events', 'none');
+
+    /* выноски с точками на полосах */
+    gaps.forEach((gp, i) => {
+      g.append('line').attr('class', 'dzr-gap-l')
+        .attr('x1', cx0).attr('x2', gp.cx).attr('y1', ys[i]).attr('y2', ys[i]);
+      g.append('circle').attr('class', 'dzr-gap-d')
+        .attr('cx', gp.cx).attr('cy', ys[i]).attr('r', 2.8);
+    });
+
+    /* карточка и текст */
+    g.append('rect').attr('class', 'dzr-note-box')
+      .attr('x', cx0).attr('y', ny0).attr('width', cw).attr('height', ch).attr('rx', 4);
+    g.append('text').attr('class', 'dzr-note-h')
+      .attr('x', cx0 + PX).attr('y', hy).text(NOTE.head);
+    lines.forEach((ln, i) => {
+      const t = g.append('text').attr('class', 'dzr-note-t').attr('y', by + i * STEP);
+      let xx = cx0 + PX;
+      ln.toks.forEach(tk => {
+        t.append('tspan').attr('x', xx).attr('class', tk.b ? 'dzr-note-b' : null).text(tk.w);
+        xx += tk.wd + SP;
+      });
+    });
+    return true;
+  }
+
+  /* === РЕНДЕР: полная перерисовка при изменении ширины === */
+  let lastW;
+  function render(){
+    const W = Math.max(280, host.clientWidth);
+    const small = W < 640;
+    const PAD = small ? 12 : 18;                   // отступ содержимого от левой/правой рамки
+    const m = { t: 14, r: small ? 24 : 60, b: 34, l: small ? 208 : 262 };
+    const ICO_X = PAD + 8;                         // центр значка: его левый край выровнен по подписи страны
+    const LBL_X = PAD + 28;                        // начало подписей товаров
+    const laneH = 20, prodGap = 8, ctryRow = 22, ctryGapTop = 18, ctryGapBot = 8;
+    const R_INV = 4.6, R_MEAS = 5;
+
+    let H = m.t + m.b;
+    D.groups.forEach((g, gi) => {
+      H += (gi ? ctryGapTop : 0) + ctryRow + ctryGapBot + g.items.length * 2 * laneH + (g.items.length - 1) * prodGap;
+    });
+
+    d3.select(host).selectAll('*').remove();
+    const svg = d3.select(host).append('svg')
+      .attr('viewBox', `0 0 ${W} ${H}`).attr('width', W).attr('height', H);
+
+    const t0 = new Date(D.domain[0]), t1 = new Date(D.domain[1]);
+    /* годы на шкале: явный список (а не d3.timeYears), чтобы 1 января 2019
+       не терялось из-за часового пояса; линия и подпись — на 1 января */
+    const years = d3.range(+D.domain[0].slice(0, 4), +D.domain[1].slice(0, 4) + 1)
+      .map(yr => ({ yr, t: new Date(yr + '-01-01') }));
+    const x = d3.scaleTime().domain([t0, t1]).range([m.l, W - m.r]);
+
+    /* сетка и ось лет */
+    svg.append('g').selectAll('line').data(years).join('line')
+      .attr('x1', d => x(d.t)).attr('x2', d => x(d.t))
+      .attr('y1', m.t).attr('y2', H - m.b).attr('class', 'dzr-grid');
+    const ax = svg.append('g').attr('transform', `translate(0,${H - m.b + 8})`);
+    ax.selectAll('text').data(years).join('text')
+      .attr('x', d => x(d.t)).attr('text-anchor', 'middle').attr('class', 'dzr-axis')
+      .text(d => d.yr);
+
+    /* ---- перерывы: полосы ---- */
+    gaps.forEach(gp => {
+      const xa = x(new Date(gp.a)), xb = x(new Date(gp.b));
+      gp.cx = (xa + xb) / 2;
+      svg.append('rect').attr('class', 'dzr-gap')
+        .attr('x', xa).attr('y', m.t).attr('width', Math.max(1, xb - xa)).attr('height', H - m.t - m.b)
+        .on('mousemove', ev => tipShow(tipGap(gp), ev))
+        .on('mouseleave', tipHide);
+      [xa, xb].forEach(xx => svg.append('line').attr('class', 'dzr-gap-e')
+        .attr('x1', xx).attr('x2', xx).attr('y1', m.t).attr('y2', H - m.b).style('pointer-events', 'none'));
+    });
+
+    /* строки: страна → товары → отрезки */
+    let y = m.t;
+    const dumbbell = (g, it, lane, kind) => {
+      const span = kind === 'inv' ? it.inv : it.meas;
+      const x1 = x(new Date(span[0])), x2 = x(new Date(span[1]));
+      const cy = y + lane * laneH + laneH / 2;
+      const gl = svg.append('g');
+      gl.append('line').attr('class', 'dzr-hit')
+        .attr('x1', x1).attr('x2', x2).attr('y1', cy).attr('y2', cy);
+      gl.append('line').attr('class', kind === 'inv' ? 'dzr-inv-l' : 'dzr-meas-l')
+        .attr('x1', x1).attr('x2', x2).attr('y1', cy).attr('y2', cy);
+      gl.append('circle').attr('class', kind === 'inv' ? 'dzr-inv-c' : 'dzr-meas-c')
+        .attr('cx', x1).attr('cy', cy).attr('r', kind === 'inv' ? R_INV : R_MEAS);
+      gl.append('circle').attr('class', kind === 'inv' ? 'dzr-inv-c' : 'dzr-meas-c')
+        .attr('cx', x2).attr('cy', cy).attr('r', kind === 'inv' ? R_INV : R_MEAS);
+      gl.selectAll('*')
+        .on('mousemove', ev => tipShow(tipBar(g, it, kind), ev))
+        .on('mouseleave', tipHide);
+      if (W >= 640) {
+        const off = (kind === 'inv' ? R_INV : R_MEAS) + 4.5;
+        svg.append('text').attr('class', 'dzr-date')
+          .attr('x', x1 - off).attr('y', cy + 3.5).attr('text-anchor', 'end').text(fmtD(span[0]));
+        svg.append('text').attr('class', 'dzr-date')
+          .attr('x', x2 + off).attr('y', cy + 3.5).attr('text-anchor', 'start').text(fmtD(span[1]));
+      }
+    };
+    D.groups.forEach((g, gi) => {
+      if (gi){
+        y += ctryGapTop;
+        svg.append('line').attr('class', 'dzr-grule')
+          .attr('x1', PAD).attr('x2', W - PAD).attr('y1', y - ctryGapTop / 2).attr('y2', y - ctryGapTop / 2);
+      }
+      svg.append('text').attr('class', 'dzr-country')
+        .attr('x', PAD).attr('y', y + ctryRow - 7).text(g.country.toUpperCase());
+      y += ctryRow + ctryGapBot;
+      g.items.forEach((it, ii) => {
+        if (ii){
+          y += prodGap;
+          svg.append('line').attr('class', 'dzr-rowrule')      /* тонкий разделитель товаров */
+            .attr('x1', PAD).attr('x2', W - PAD).attr('y1', y - prodGap / 2).attr('y2', y - prodGap / 2);
+        }
+        const mid = y + laneH;                                  /* центр блока из двух дорожек */
+
+        /* значок статуса (у расследований без введённой меры его нет) */
+        if (it.st) {
+          const ic = svg.append('g')
+            .attr('class', 'dzr-st dzr-st-' + it.st)
+            .attr('transform', `translate(${ICO_X},${mid})`)
+            .attr('tabindex', 0).attr('role', 'img')
+            .attr('aria-label', `${it.good}: ${ST[it.st].tip}`);
+          addIcon(ic, it.st);
+          const html = tipStatus(g, it);
+          ic.on('mousemove', ev => tipShow(html, ev))
+            .on('mouseleave', tipHide)
+            .on('click', ev => tipShow(html, ev))
+            .on('focus', function(){ tipShow(html, anchorEv(this)); })
+            .on('blur', tipHide);
+        }
+
+        /* название товара */
+        svg.append('text').attr('class', 'dzr-good')
+          .attr('x', LBL_X).attr('y', mid + 4.5)
+          .text(it.good.length > 26 ? it.good.slice(0, 25) + '…' : it.good)
+          .style('cursor', 'default')
+          .on('mousemove', ev => tipShow(tipBar(g, it, it.meas ? 'meas' : 'inv'), ev))
+          .on('mouseleave', tipHide);
+
+        dumbbell(g, it, 0, 'inv');
+        if (it.meas) dumbbell(g, it, 1, 'meas');
+        y += 2 * laneH;
+      });
+    });
+
+    /* примечание рисуем последним; если не помещается — абзац под графиком */
+    const noteOk = drawNote(svg, W, m, x);
+    nm.hidden = noteOk;
+    if (!noteOk) {
+      nm.innerHTML = `<b>${NOTE.head}</b> ` + NOTE.body.map(([s, b]) => b ? `<b>${s}</b>` : s).join('');
+    }
+  }
+  render();
+  if (window.ResizeObserver) new ResizeObserver(() => { const w = host.clientWidth; if (w !== lastW){ lastW = w; render(); } }).observe(host);
+  window.addEventListener('resize', () => { const w = host.clientWidth; if (w !== lastW){ lastW = w; render(); } });
+  /* после загрузки веб-шрифтов ширина текста меняется — перерисовываем */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
 })();
 </script>
 </body>
